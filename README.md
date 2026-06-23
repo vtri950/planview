@@ -139,9 +139,9 @@ flowchart TD
 
 ## Workflow with the visual-docs skill
 
-planview pairs with the **[visual-docs](https://github.com/vtri950/visual-docs-skill)** Claude Code skill. The skill authors structured MDX documents; planview displays them.
+planview pairs with the **[visual-docs](https://github.com/vtri950/skills/tree/main/visual-docs)** Claude Code skill. The skill authors structured MDX documents; planview displays them.
 
-1. Install the skill from [vtri950/visual-docs-skill](https://github.com/vtri950/visual-docs-skill) into your Claude Code setup
+1. Install the skill from [vtri950/skills/visual-docs](https://github.com/vtri950/skills/tree/main/visual-docs) into your Claude Code setup
 2. Run `/visual-docs <topic>` to author a new doc, or `/visual-docs convert <file.md>` to convert an existing one — output is a `.mdx` file saved to your docs directory
 3. Run `npx @vtripathi/planview@latest --dir ./your-docs` to view it
 4. Click headings to add notes, use the side drawer for git history
