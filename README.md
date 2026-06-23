@@ -135,16 +135,17 @@ flowchart TD
 - [ ] Not done
 ```
 
-> **Note:** Raw markdown tables are not supported. Use a component instead.
+> **Note:** Narrow markdown tables (≤4 columns, short cells) render with full styling. Wide or semantic tables (model comparisons, step sequences) should use a component instead.
 
-## Workflow with visual-plan
+## Workflow with the visual-docs skill
 
-planview pairs with the [`visual-plan`](https://github.com/vtripathi) Claude Code skill. The skill authors structured MDX plan documents; planview displays them.
+planview pairs with the **[visual-docs](https://github.com/vtri950/visual-docs-skill)** Claude Code skill. The skill authors structured MDX documents; planview displays them.
 
-1. Run `/visual-plan` in Claude Code to author a plan — output is a `.mdx` file
-2. Run `npx @vtripathi/planview --dir ./plans` to view it
-3. Click headings to comment, use the side drawer for git history
-4. Export HTML to share or save as PDF
+1. Install the skill from [vtri950/visual-docs-skill](https://github.com/vtri950/visual-docs-skill) into your Claude Code setup
+2. Run `/visual-docs <topic>` to author a new doc, or `/visual-docs convert <file.md>` to convert an existing one — output is a `.mdx` file saved to your docs directory
+3. Run `npx @vtripathi/planview@latest --dir ./your-docs` to view it
+4. Click headings to add notes, use the side drawer for git history
+5. Export HTML to share or save as PDF
 
 ## Publishing / contributing
 
