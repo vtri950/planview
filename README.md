@@ -2,6 +2,20 @@
 
 A local web viewer for MDX plan files. Browse, read, comment, and export your plans from the browser — no database, no cloud, everything stays on disk.
 
+## Workflow with the visual-docs skill
+
+planview pairs with the **[visual-docs](https://github.com/vtri950/skills/tree/main/visual-docs)** skill for AI coding assistants. The skill authors structured MDX documents; planview displays them.
+
+1. Install the skill from [vtri950/skills/visual-docs](https://github.com/vtri950/skills/tree/main/visual-docs) into your AI assistant
+2. Ask your assistant to author a new doc (`/visual-docs <topic>`) or convert an existing one (`/visual-docs convert <file.md>`) — output is a `.mdx` file saved to your docs directory
+3. Run `npx @vtripathi/planview@latest --dir ./your-docs` to view it
+4. Click headings to add notes, use the side drawer for git history
+5. Export HTML to share or save as PDF
+
+## Publishing / contributing
+
+The package is published to npm at [`@vtripathi/planview`](https://www.npmjs.com/package/@vtripathi/planview).
+
 ## Install & run
 
 No cloning required. Use `npx`:
@@ -137,24 +151,4 @@ flowchart TD
 
 > **Note:** Narrow markdown tables (≤4 columns, short cells) render with full styling. Wide or semantic tables (model comparisons, step sequences) should use a component instead.
 
-## Workflow with the visual-docs skill
 
-planview pairs with the **[visual-docs](https://github.com/vtri950/skills/tree/main/visual-docs)** skill for AI coding assistants. The skill authors structured MDX documents; planview displays them.
-
-1. Install the skill from [vtri950/skills/visual-docs](https://github.com/vtri950/skills/tree/main/visual-docs) into your AI assistant
-2. Ask your assistant to author a new doc (`/visual-docs <topic>`) or convert an existing one (`/visual-docs convert <file.md>`) — output is a `.mdx` file saved to your docs directory
-3. Run `npx @vtripathi/planview@latest --dir ./your-docs` to view it
-4. Click headings to add notes, use the side drawer for git history
-5. Export HTML to share or save as PDF
-
-## Publishing / contributing
-
-The package is published to npm at [`@vtripathi/planview`](https://www.npmjs.com/package/@vtripathi/planview).
-
-To build and publish a new version:
-
-```bash
-npm run build        # builds Next.js standalone output + copies static assets
-npm version patch    # bumps version
-npm publish --access public
-```
